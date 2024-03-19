@@ -275,9 +275,9 @@ FROM EMPLOYEE
 NATURAL JOIN JOB
 WHERE JOB_NAME = '대리'
 AND SALARY > (SELECT MIN(SALARY) 
-FROM EMPLOYEE 
-NATURAL JOIN JOB 
-WHERE JOB_NAME = '과장'); 
+							FROM EMPLOYEE 
+							NATURAL JOIN JOB 
+							WHERE JOB_NAME = '과장'); 
 -->  원래는 다중행이었으나(IN 사용해야함) MIN으로 SALARY를 설정하니 단일행으로 변경되서 ()만 사용해도 됨!
 
 

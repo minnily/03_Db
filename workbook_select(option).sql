@@ -270,8 +270,8 @@ LEFT JOIN TB_CLASS_PROFESSOR USING(CLASS_NO)
 JOIN TB_DEPARTMENT USING(DEPARTMENT_NO)
 WHERE CATEGORY = '예체능'
 AND PROFESSOR_NO IS NULL;
-—TB_CLASS 테이블과 TB_CLASS_PROFESSOR 테이블을 CLASS_NO이란 컬럼으로 조인을 해줄건데, TB_CLASS 테이블에있는 값이랑, TB_CLASS_PROFESSOR 이랑 가진 값이 다를수도있거든요? 
-배정이 안되었다면 TB_CLASS_PROFESSOR 안에 CLASS_NO 값이 존재하지를 않아요. 그래서 TB_CLASS 테이블에 있는 모든값을 기준으로 LEFT JOIN 해주셔야함.
+-- TB_CLASS 테이블과 TB_CLASS_PROFESSOR 테이블을 CLASS_NO이란 컬럼으로 조인을 해줄건데, TB_CLASS 테이블에있는 값이랑, TB_CLASS_PROFESSOR 이랑 가진 값이 다를수도있거든요? 
+-- 배정이 안되었다면 TB_CLASS_PROFESSOR 안에 CLASS_NO 값이 존재하지를 않아요. 그래서 TB_CLASS 테이블에 있는 모든값을 기준으로 LEFT JOIN 해주셔야함.
 
 
 SELECT CLASS_NAME, PROFESSOR_NO
@@ -359,7 +359,7 @@ ORDER BY 1;
 
 
 -- 16번
--- 환경조경학과 전공과목들의 과목 별 평점을 파악할 수 있는 SQL 문을 작성하시오.
+-- 환경조경학과 전공과목들의 과목별 평점을 파악할 수 있는 SQL 문을 작성하시오.
 -- ANSI
 SELECT CLASS_NO, CLASS_NAME, TRUNC(AVG(POINT),8)
 FROM TB_CLASS
